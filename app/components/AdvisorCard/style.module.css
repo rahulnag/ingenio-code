@@ -1,0 +1,76 @@
+.card-container {
+    border-bottom: 0.1px solid var(--light-color);
+    min-width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    column-gap: 10px;
+}
+
+.profile-image-holder {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    border-radius: 50%;
+}
+
+.profile-name {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.profile-price {
+    font-weight: 600;
+    color: var(--dark-color)
+}
+
+.price-measurement {
+    font-size: 10px;
+}
+
+.call-chat-holder {
+    display: flex;
+    flex-direction: column;
+    min-height: 90px;
+}
+
+.active-button {
+    border: none;
+    outline: none;
+    width: 7rem;
+    height: 1.5rem;
+    margin-top: 5px;
+    border-radius: var(--border-radius);
+    padding: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.inactive-button {
+    border: none;
+    outline: none;
+    width: 7rem;
+    height: 1.5rem;
+    margin-top: 5px;
+    border-radius: var(--border-radius);
+    padding: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    background-color: var(--light-color);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+}
