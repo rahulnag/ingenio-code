@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+//page not found component
 const notfound = () => {
     return (
         <div style={{ minHeight: "100vh", paddingTop: '5rem', textAlign: 'center' }}>

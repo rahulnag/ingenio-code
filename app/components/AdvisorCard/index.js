@@ -3,8 +3,8 @@ import Image from 'next/image';
 import styles from './style.module.css'
 import { useEffect, useState } from "react";
 import axios from 'axios'
-import ActiveButton from './active-button';
-import InactiveButton from './inactive-button';
+import ActiveButton from '../Buttons/active-button';
+import InactiveButton from '../Buttons/inactive-button';
 import Loading from '@/app/components/Loader'
 const index = ({ id, name, pictureUrl, price, ...props }) => {
 
@@ -25,6 +25,7 @@ const index = ({ id, name, pictureUrl, price, ...props }) => {
     }, [])
 
 
+    //fetch advisor details
     async function getAdvisorData(id) {
         try {
             setAdvisorData({ ...advisorData, loading: true })

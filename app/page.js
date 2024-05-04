@@ -1,5 +1,7 @@
 import styles from "./page.module.css";
 import AdvisorCard from './components/AdvisorCard'
+
+//fetch advisor data
 async function getData() {
   let data = undefined
   try {
@@ -11,7 +13,6 @@ async function getData() {
     );
     if (!res?.ok) {
       return "error"
-      throw new Error("Failed to fetch data");
     }
     data = await res.json()
     return data
@@ -19,7 +20,6 @@ async function getData() {
 
   catch (error) {
     return "error"
-    // throw new Error("Failed to fetch data");
   }
 }
 
@@ -29,13 +29,17 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <h1 style={{ margin: '1rem 0 5rem 0', color: "var(--dark-color)" }}>Advisor Availability</h1>
+
+      {/* show error message if any error happened */}
       {
         advisorData == "error" && <h1>Error loading advisors</h1>
       }
+
+      {/* show advisor list  */}
       {
         advisorData !== undefined && advisorData?.data?.map((advisor) => {
           return (
-            <AdvisorCard {...advisor} />
+            <AdvisorCard {...advisor} key={advisor?.id} />
           )
         })
       }

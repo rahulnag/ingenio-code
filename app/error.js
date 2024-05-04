@@ -1,5 +1,7 @@
 'use client'
 import styles from './page.module.css'
+
+//default error component
 const error = () => {
     return (
         <div>
