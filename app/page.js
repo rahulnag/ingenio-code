@@ -28,7 +28,7 @@ export default async function Home() {
   advisorData = await getData();
   return (
     <main className={styles.main}>
-      <h1 style={{ margin: '1rem 0 5rem 0', color: "var(--dark-color)" }}>Advisor Availability</h1>
+      <h1 style={{ margin: '1rem 0 5rem 0', color: "var(--dark-color)" }}>Advisors Availability</h1>
 
       {/* show error message if any error happened */}
       {
